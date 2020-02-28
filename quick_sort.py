@@ -1,3 +1,5 @@
+# time complexity: n*log(n) or  n^2
+# spaace complexity: O(logn) or O(n)
 # approach 1 start
 def quickSort(arr):
     if len(arr) <= 1:
