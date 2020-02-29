@@ -25,6 +25,8 @@ def generateLinkedList(nodes):
 nodes = [1, 2, 3, 4, 5]
 l1 = generateLinkedList(nodes)
 
+# # recursive method start
+
 
 def reverseList(head):
 
@@ -42,3 +44,29 @@ ans = reverseList(l1)
 while ans:
     print(ans.val)
     ans = ans.next
+
+# # recursive method end
+
+# traversal method start O(n), O(1)
+
+
+def reverseList(head):
+    prev = None
+    curr = head
+
+    while curr:
+        temp = curr.next
+        curr.next = prev
+        prev = curr
+        curr = temp
+
+    return prev
+
+
+ans = reverseList(l1)
+
+while ans:
+    print(ans.val)
+    ans = ans.next
+
+# traversal method end
